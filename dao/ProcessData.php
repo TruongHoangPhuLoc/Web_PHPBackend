@@ -2,9 +2,9 @@
 include ("../validation/Message.php");
 class Database
 {
-    private $dns = "mysql:host=localhost; dbname=mydatabase; charset=utf8";
-    private $username = "PhuLoc";
-    private $password = "Phuloc@99";
+    private $dns = "mysql:host=localhost; dbname=MyDB; charset=utf8";
+    private $username = "admin";
+    private $password = "Phuloc@99.";
     private $pdo;
     private $stmt;
 
