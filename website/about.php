@@ -68,8 +68,11 @@ $conn->closeConn();
             </div>
         </div>
     </nav>
+
     <section class="jumbotron text-center">
         <div class="container">
+	    <h3>Author</h3>
+             <img style="height:200px;width:180px"src="../image/logo/88871833-8C33-482F-9AFE-1B892DD3143B.jpeg">
             <h1 class="jumbotron-heading">Manage Product</h1>
             <h3>User: <?php echo "{$_SESSION['user_name']}"?></h3>
         </div>

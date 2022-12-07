@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/js/bootstrap.min.js">
     <link rel="stylesheet" href="../css/login_style.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
 <div class="row">

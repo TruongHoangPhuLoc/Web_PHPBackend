@@ -7,20 +7,24 @@ if (isset($_GET['id'])) {
         $id = $_GET['id'];
         if (isset($_POST['delete']))
         {
+	    $slcpt = "select photo from product where id = :id";
             $query = "delete from product where id = :id";
             $condition=["id"=>$id];
+	    $result = $conn->selectParam($slcpt, $condition);
+	    $image = $result->fetch(PDO::FETCH_ASSOC);
+	    shell_exec("rm -f /var/www/myphp/image/".$image['photo']);
             $flag = $conn->selectParam($query,$condition);
             if($flag)
-            {
+            {  
                 echo"<script>
-                        alert('Successfully to delete')
+                        alert('Delete successfully');
                         window.location.href = 'about.php';
                     </script>";
             }
             else
             {
                 echo"<script>
-                        alert('Something wrong when delete')
+                        alert('Something wrong when delete');
                         window.location.href = 'delete.php?id={$id}';
                     </script>";
             }
@@ -75,4 +79,3 @@ else
 </form>
 </body>
 </html>
-

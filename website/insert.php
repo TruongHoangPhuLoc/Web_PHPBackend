@@ -38,11 +38,11 @@ if(isset($_SESSION['user_name']))
         }
         if($_FILES['img']['name']!='')
         {
-            if(exif_imagetype($_FILES['img']['tmp_name'])) {
-                move_uploaded_file($_FILES['img']['tmp_name'],"../image/{$_FILES['img']['name']}");
+		if(exif_imagetype($_FILES['img']['tmp_name'])){
+		move_uploaded_file($_FILES['img']['tmp_name'],"/var/www/myphp/image/{$_FILES['img']['name']}");
                 $image = $_FILES['img']['name'];
 
-            }
+        	}
             else
             {
                 echo '<script>';

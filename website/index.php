@@ -39,6 +39,7 @@ if($_SERVER['REQUEST_METHOD']==='POST')
     <link rel="stylesheet" type="text/css" href=../css/login_style.css>
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
 </head>
 <body>
 <div class="container">
@@ -78,7 +79,8 @@ if($_SERVER['REQUEST_METHOD']==='POST')
                 </div>
             </div>
         </div>
-    </div>
 </div>
+</div>    
+
 </body>
 </html>
