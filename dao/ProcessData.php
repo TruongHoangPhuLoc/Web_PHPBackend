@@ -2,7 +2,8 @@
 include ("../validation/Message.php");
 class Database
 {
-    private $dns = "mysql:host=mysql; dbname=MyDB; charset=utf8";
+    private $mysqlhost;
+    private $dns;
     private $username;
     private $password;
     private $pdo;
@@ -11,6 +12,8 @@ class Database
     public function __construct()
     {
         try{
+            $this->mysqlhost = getenv('mysqlhost');
+            $this->dns = sprintf('mysql:host=%s; dbname=MyDB; charset=utf8',$this->mysqlhost);
             $this->username = getenv('username');
             $this->password = getenv('password');
             $this->pdo = new PDO($this->dns,$this->username,$this->password);
