@@ -2,15 +2,17 @@
 include ("../validation/Message.php");
 class Database
 {
-    private $dns = "mysql:host=localhost; dbname=MyDB; charset=utf8";
-    private $username = "admin";
-    private $password = "Phuloc@99.";
+    private $dns = "mysql:host=mysql; dbname=MyDB; charset=utf8";
+    private $username;
+    private $password;
     private $pdo;
     private $stmt;
 
     public function __construct()
     {
         try{
+            $this->username = getenv('username');
+            $this->password = getenv('password');
             $this->pdo = new PDO($this->dns,$this->username,$this->password);
         }
         catch (Exception $e)
