@@ -1,4 +1,4 @@
 #run mysql container
 docker run --name mysql -v mysql:/var/lib/mysql --network mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 #run application container
-docker run -d --name test-1 --network mysql -p:8080:80 -e mysqlhost=mysql -e username=root -e password=root my-img-1
+docker run -d --name php-web --network mysql -p:8080:80 -v app:/var/www/app/uploaded_images -e mysqlhost=mysql -e username=root -e password=root locthp/php-web:v1.0.0

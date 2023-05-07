@@ -102,7 +102,7 @@ $conn->closeConn();
                             echo"<tr>";
                             echo"<td>${product['id']}</td>";
                             if($product['photo']!=null) {
-                                echo "<td><img src='../image/${product['photo']}'width='200px'/> </td>";
+                                echo "<td><img src='../uploaded_images/${product['photo']}'width='200px'/> </td>";
                             }
                             else
                             {
